@@ -1,0 +1,66 @@
+<div class="accounts clearfix" >
+    <ul class="nav nav-pills float-right">
+        <li class="nav-item">
+            <a class="nav-link" href="/shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart<span class = "badge badge-pill badge-dark">  {{session.cart.totalQty}}</span></a>
+        </li>
+        <li class="nav-item dropdown ">
+                {{#if login}}
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/user/profiles">Profile</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/user/logout">Logout</a>
+                </div>
+                {{else}}
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">Sign in/Join</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/user/signin">Sign In</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/user/signup">Join</a>
+                </div>
+                {{/if}}
+        </li>
+    </ul>
+</div>
+
+
+
+<nav class="second navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav navbar-left">
+               <h3 class="pulse"><a href="/">Home</a></h3>
+
+        </ul>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <div class="">
+                <a class="navbar-brand" href="/">
+                    <image class="logo img-responsive" src="public/images/elegant lady.png"  ></image> </a>
+            </div>
+        </div>
+
+
+        <ul class="nav navbar-nav navbar-left">
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle pulse" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h3 id="Shop">Shop<span class="caret"></span></h3></a>
+                <ul class="dropdown-menu">
+                    {{# if login}}
+                            <a class="dropdown-item" href="/user/profiles">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/user/logout">Logout</a>
+                    {{else}}
+                        <a class="dropdown-item" href="/user/profiles">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/user/logout">Logout</a>
+                    {{/if}}
+
+                </ul>
+            </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
